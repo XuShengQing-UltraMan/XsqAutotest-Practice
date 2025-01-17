@@ -1,0 +1,20 @@
+{
+  "windows": {
+    "script_root": "C:\\AutotestPractice\\iosAutotest\\Practice1.air",
+    "log_root": "C:\\AutotestPractice\\iosAutotest\\Practice1.air\\log",
+    "export_dir": "C:\\AutotestReport\\GoogleMapTest",
+    "logfile": "C:\\AutotestPractice\\iosAutotest\\Practice1.air\\log\\log.txt",
+    "device_connection_string": "ios:///127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  },
+  "mac": {
+    "script_root": "/Users/joseishou/Airtest_IC_ITCC_Flux/テストスクリプト(IOS)/VHA_SmokeTest.air",
+    "log_root": "/Users/joseishou/Airtest_IC_ITCC_Flux/テストスクリプト(IOS)/VHA_SmokeTest.air/log",
+    "export_dir": "/Users/joseishou/VHAtestReport/VHA_SmokeTest",
+    "logfile": "/Users/joseishou/Airtest_IC_ITCC_Flux/テストスクリプト(IOS)/VHA_SmokeTest.air/log/log.txt",
+    "device_connection_string": "ios:///127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  }
+}

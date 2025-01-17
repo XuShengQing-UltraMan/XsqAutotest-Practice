@@ -1,0 +1,194 @@
+{
+    "tag": "function",
+    "depth": 1,
+    "time": 1737092153.9851327,
+    "data": {
+        "name": "connect_device",
+        "call_args": {
+            "uri": "ios:///127.0.0.1:8100"
+        },
+        "start_time": 1737092153.5800421,
+        "ret": "<IOS 'e1d43ec1f72340061369c82b3956e8719687b7f5'>",
+        "end_time": 1737092153.9851327
+    }
+}
+{
+    "tag": "function",
+    "depth": 1,
+    "time": 1737092157.2532115,
+    "data": {
+        "name": "start_app",
+        "call_args": {
+            "package": "com.google.Maps",
+            "activity": null
+        },
+        "start_time": 1737092156.7066112,
+        "ret": null,
+        "end_time": 1737092157.2532115
+    }
+}
+{
+    "tag": "function",
+    "depth": 3,
+    "time": 1737092169.4253688,
+    "data": {
+        "name": "_cv_match",
+        "call_args": {
+            "self": {
+                "filename": "search.png",
+                "_filepath": "C:\\AutotestPractice\\iosAutotest\\Practice1.air\\search.png",
+                "threshold": 0.7,
+                "target_pos": 5,
+                "record_pos": null,
+                "resolution": [],
+                "rgb": false,
+                "scale_max": 800,
+                "scale_step": 0.005,
+                "__class__": "Template"
+            },
+            "screen": "array([[[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       [[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       [[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       ...,\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [252, 246, 239],\n        [252, 246, 239],\n        [254, 245, 239]],\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [222, 216, 209],\n        [221, 215, 208],\n        [222, 213, 207]],\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [229, 223, 216],\n        [229, 223, 216],\n        [231, 222, 216]]], dtype=uint8)"
+        },
+        "start_time": 1737092168.8103044,
+        "ret": {
+            "result": [
+                251,
+                115
+            ],
+            "rectangle": [
+                [
+                    135,
+                    84
+                ],
+                [
+                    135,
+                    146
+                ],
+                [
+                    368,
+                    146
+                ],
+                [
+                    368,
+                    84
+                ]
+            ],
+            "confidence": 0.8579629361629486,
+            "time": 0.5053844451904297
+        },
+        "end_time": 1737092169.4253688
+    }
+}
+{
+    "tag": "function",
+    "depth": 3,
+    "time": 1737092169.4767194,
+    "data": {
+        "name": "try_log_screen",
+        "call_args": {
+            "screen": "array([[[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       [[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       [[238, 218, 144],\n        [238, 218, 144],\n        [238, 218, 144],\n        ...,\n        [245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246]],\n\n       ...,\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [252, 246, 239],\n        [252, 246, 239],\n        [254, 245, 239]],\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [222, 216, 209],\n        [221, 215, 208],\n        [222, 213, 207]],\n\n       [[245, 243, 246],\n        [245, 243, 246],\n        [245, 243, 246],\n        ...,\n        [229, 223, 216],\n        [229, 223, 216],\n        [231, 222, 216]]], dtype=uint8)",
+            "quality": null,
+            "max_size": null
+        },
+        "start_time": 1737092169.4267235,
+        "ret": {
+            "screen": "1737092169427.jpg",
+            "resolution": [
+                2160,
+                1620
+            ]
+        },
+        "end_time": 1737092169.4767194
+    }
+}
+{
+    "tag": "function",
+    "depth": 2,
+    "time": 1737092169.4783092,
+    "data": {
+        "name": "loop_find",
+        "call_args": {
+            "query": {
+                "filename": "search.png",
+                "_filepath": "C:\\AutotestPractice\\iosAutotest\\Practice1.air\\search.png",
+                "threshold": 0.7,
+                "target_pos": 5,
+                "record_pos": null,
+                "resolution": [],
+                "rgb": false,
+                "scale_max": 800,
+                "scale_step": 0.005,
+                "__class__": "Template"
+            },
+            "timeout": 20,
+            "threshold": null,
+            "interval": 0.5,
+            "intervalfunc": null
+        },
+        "start_time": 1737092167.2539754,
+        "ret": [
+            251,
+            115
+        ],
+        "end_time": 1737092169.4778013
+    }
+}
+{
+    "tag": "function",
+    "depth": 1,
+    "time": 1737092174.6124618,
+    "data": {
+        "name": "touch",
+        "call_args": {
+            "v": {
+                "filename": "search.png",
+                "_filepath": "C:\\AutotestPractice\\iosAutotest\\Practice1.air\\search.png",
+                "threshold": 0.7,
+                "target_pos": 5,
+                "record_pos": null,
+                "resolution": [],
+                "rgb": false,
+                "scale_max": 800,
+                "scale_step": 0.005,
+                "__class__": "Template"
+            },
+            "kwargs": {},
+            "times": 1
+        },
+        "start_time": 1737092167.2539754,
+        "ret": [
+            251,
+            115
+        ],
+        "end_time": 1737092174.6124618
+    }
+}
+{
+    "tag": "function",
+    "depth": 1,
+    "time": 1737092178.392048,
+    "data": {
+        "name": "text",
+        "call_args": {
+            "text": "東京タワー",
+            "kwargs": {},
+            "enter": true
+        },
+        "start_time": 1737092177.6132238,
+        "ret": null,
+        "end_time": 1737092178.392048
+    }
+}
+{
+    "tag": "function",
+    "depth": 1,
+    "time": 1737092188.3046243,
+    "data": {
+        "name": "stop_app",
+        "call_args": {
+            "package": "com.google.Maps"
+        },
+        "start_time": 1737092181.3925197,
+        "ret": null,
+        "end_time": 1737092188.3046243
+    }
+}

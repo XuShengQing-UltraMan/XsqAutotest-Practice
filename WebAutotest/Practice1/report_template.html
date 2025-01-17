@@ -1,0 +1,217 @@
+<!DOCTYPE html> <!-- ドキュメントタイプ宣言: このページがHTML5であることを指定する -->
+<html lang=""> <!-- html要素: lang属性は空のままだが、必要に応じて"ja"などを指定可能 -->
+<head> <!-- head要素の開始: メタ情報やスタイルを定義する部分 -->
+    <meta charset="UTF-8"> <!-- 文字エンコーディングをUTF-8に設定する -->
+    <style>
+        /*
+           bodyセレクタ: ページ全体の文字フォントやマージンなどを設定
+        */
+        body {{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }}
+        /*
+           h1セレクタ: タイトル文字の色を指定
+        */
+        h1 {{
+            color: #333;
+        }}
+        /*
+           .summary-tableクラス: テスト概要などの情報表示テーブルのベース設定
+        */
+        .summary-table {{
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 300px;
+        }}
+        /*
+           .summary-table th, .summary-table td: テーブルのセル共通スタイル(枠線、余白、文字サイズなど)
+        */
+        .summary-table th, .summary-table td {{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+            vertical-align: top;
+        }}
+        /*
+           .summary-table th: テーブルの見出しセルに背景色や幅などを設定
+        */
+        .summary-table th {{
+            background: #f7f7f7;
+            width: 150px;
+            font-weight: bold;
+            color: #333;
+        }}
+        /*
+           .test-result-pass, .test-result-fail: テスト結果を表示する際の色設定
+        */
+        .test-result-pass {{
+            color: green;
+            font-weight: bold;
+        }}
+        .test-result-fail {{
+            color: red;
+            font-weight: bold;
+        }}
+
+        /*
+           .table-containerクラス: テーブルを囲むコンテナに余白を与える
+        */
+        .table-container {{
+            margin-top: 20px;
+        }}
+        /*
+           .collapsible-tableクラス: 折りたたみが可能なテーブルの共通スタイル
+        */
+        .collapsible-table {{
+            width: 100%;
+            border-collapse: collapse;
+        }}
+        /*
+           .collapsible-table th, .collapsible-table td: テーブルセル共通の枠線や余白、文字サイズを設定
+        */
+        .collapsible-table th, .collapsible-table td {{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }}
+        /*
+           .collapsible-table th: テーブルヘッダ行の背景色設定
+        */
+        .collapsible-table th {{
+            background: #f2f2f2;
+        }}
+        /*
+           .success, .failクラス: 成功行・失敗行の背景色を設定
+        */
+        .success {{
+            background: #e6ffe6;
+        }}
+        .fail {{
+            background: #ffe6e6;
+        }}
+        /*
+           .toggle-btnクラス: テーブルの表示/非表示を切り替えるボタンのスタイル
+        */
+        .toggle-btn {{
+            padding: 5px 10px;
+            background: #007BFF;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }}
+        /*
+           .toggle-btn:hover: ボタンにカーソルが乗った時の背景色を変更
+        */
+        .toggle-btn:hover {{
+            background: #0056b3;
+        }}
+        /*
+           .env-tableクラス: 実行環境情報などを表示するテーブルのスタイル
+        */
+        .env-table {{
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 600px;
+        }}
+        /*
+           .env-table th, .env-table td: env-table用セルの共通スタイル
+        */
+        .env-table th, .env-table td {{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+            vertical-align: top;
+        }}
+        /*
+           .env-table th: env-tableヘッダセルの背景色や文字色を設定
+        */
+        .env-table th {{
+            background: #f7f7f7;
+            width: 150px;
+            font-weight: bold;
+            color: #333;
+        }}
+    </style> <!-- style要素の終了 -->
+    <title>FluxWebUIデグレチェック結果</title> <!-- ページのタイトルを指定する -->
+</head> <!-- head要素の終了 -->
+<body> <!-- body要素の開始: ページ本文を定義する -->
+    <h1>FluxWebUIデグレチェック結果</h1> <!-- メインの見出しを表示する -->
+
+    <!-- テスト実行環境や使用アカウントなどをまとめたテーブル -->
+    <table class="env-table">
+        <tr> <!-- 行を開始 -->
+            <th>実行日時</th> <!-- 実行日時の見出しセル -->
+            <td>{report_time}</td> <!-- 実行日時データを表示するセル(プレースホルダ) -->
+        </tr> <!-- 行を終了 -->
+        <tr>
+            <th>テスト環境URL</th>
+            <td>{report_env}</td>
+        </tr>
+        <tr>
+            <th>使用ブラウザ</th>
+            <td>{report_browser}</td>
+        </tr>
+        <tr>
+            <th>使用テストアカウント</th>
+            <td>{report_account}</td>
+        </tr>
+    </table>
+
+    <h2>テスト概要</h2> <!-- テスト全体の概要を示す見出し -->
+    <table class="summary-table"> <!-- テスト概要を示すテーブル -->
+        <!-- テスト結果行(成功/失敗表示など) -->
+        <tr>
+            <th>テスト結果</th> <!-- テスト結果の見出し -->
+            <td><span class="{test_result_class}">{test_result_text}</span>{fail_step_info}</td> <!-- 結果表示(プレースホルダ) -->
+        </tr>
+        <tr>
+            <th>総ケース数</th>
+            <td>{total_steps}</td> <!-- 総ケース数(プレースホルダ) -->
+        </tr>
+        <tr>
+            <th>成功ケース数</th>
+            <td>{success_steps}</td> <!-- 成功ケース数(プレースホルダ) -->
+        </tr>
+        <tr>
+            <th>失敗ケース数</th>
+            <td>{fail_steps}</td> <!-- 失敗ケース数(プレースホルダ) -->
+        </tr>
+    </table>
+
+    <!-- テストステップの詳細を表示するコンテナ -->
+    <div class="table-container">
+        <!-- 折りたたみボタン: ステップ一覧の表示/非表示を切り替える -->
+        <button class="toggle-btn" onclick="toggleTable()">ステップ一覧を表示/非表示</button>
+        <!-- 詳細なテストステップを一覧表示するテーブル -->
+        <table id="test-steps-table" class="collapsible-table">
+            <tr> <!-- テーブルヘッダ行 -->
+                <th>No</th>
+                <th>時間</th>
+                <th>操作</th>
+                <th>結果</th>
+            </tr>
+            {table_rows} <!-- テストステップ内容を差し込むプレースホルダ -->
+        </table>
+    </div>
+
+    <!-- JavaScript: テーブルを折りたたむ関数 -->
+    <script>
+    function toggleTable() {{
+        const table = document.getElementById('test-steps-table');
+        if (table.style.display === 'none') {{
+            table.style.display = 'table';
+        }} else {{
+            table.style.display = 'none';
+        }}
+    }}
+    </script>
+</body> <!-- body要素の終了 -->
+</html> <!-- html要素の終了 -->
